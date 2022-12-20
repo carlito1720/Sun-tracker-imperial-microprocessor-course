@@ -1,0 +1,800 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/hextodec.o
+routine_code CODE 0 1FBC4 1FBC4 F0 1 1
+udata_acs COMRAM 1 0 0 E 1 1
+$build/default/production/main.o
+code CODE 0 0 0 68 1 2
+udata_acs COMRAM 1 18 18 9 1 1
+config CONFIG 4 300000 300000 E 1 1
+$build/default/production/routine.o
+routine_code CODE 0 1FDD2 1FDD2 22E 1 1
+udata_acs COMRAM 1 E E A 1 1
+$build/default/production/config.o
+config CONFIG 4 300000 300000 E 1 1
+$build/default/production/ADC.o
+adc_code CODE 0 1FAF8 1FAF8 1E 1 1
+$build/default/production/LCD.o
+udata_acs_ovr COMRAM 1 2F 2F 1 1 1
+udata_acs COMRAM 1 26 26 5 1 1
+lcd_code CODE 0 1FCB4 1FCB4 11E 1 1
+$build/default/production/LDR.o
+routine_code CODE 0 1FB16 1FB16 48 1 1
+udata_acs COMRAM 1 2B 2B 4 1 1
+$build/default/production/motor_control.o
+udata_acs COMRAM 1 21 21 5 1 1
+motor_code CODE 0 1FB5E 1FB5E 66 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-F15 1
+SFR F16-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 68-1FAF7 1
+IDLOC 200000-200007 1
+SMALLCONST 1000-1FAF7 1
+CODE 68-1FAF7 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-F15 1
+BIGRAM 68-F15 1
+BIGSFR F16-FFF 1
+COMRAM 30-5F 1
+EEDATA F00000-F003FF 1
+MEDIUMCONST 1000-FFFF 1
+MEDIUMCONST 11000-1FAF7 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/hextodec.o
+1FBC4 routine_code CODE >26:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBC6 routine_code CODE >27:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBC8 routine_code CODE >28:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBCA routine_code CODE >29:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBCC routine_code CODE >30:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBCE routine_code CODE >31:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBD0 routine_code CODE >32:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBD4 routine_code CODE >33:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBD8 routine_code CODE >34:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBDC routine_code CODE >37:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBDE routine_code CODE >39:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBE0 routine_code CODE >40:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBE2 routine_code CODE >41:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBE4 routine_code CODE >42:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBE6 routine_code CODE >43:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBE8 routine_code CODE >44:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBEA routine_code CODE >45:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBEC routine_code CODE >46:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBEE routine_code CODE >47:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBF0 routine_code CODE >48:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBF2 routine_code CODE >49:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBF4 routine_code CODE >50:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBF6 routine_code CODE >51:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBFA routine_code CODE >54:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBFC routine_code CODE >56:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FBFE routine_code CODE >57:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC00 routine_code CODE >58:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC02 routine_code CODE >59:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC04 routine_code CODE >60:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC06 routine_code CODE >61:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC08 routine_code CODE >62:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC0A routine_code CODE >63:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC0C routine_code CODE >64:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC0E routine_code CODE >65:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC10 routine_code CODE >66:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC12 routine_code CODE >67:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC14 routine_code CODE >68:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC18 routine_code CODE >71:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC1A routine_code CODE >73:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC1C routine_code CODE >74:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC1E routine_code CODE >75:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC20 routine_code CODE >76:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC22 routine_code CODE >77:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC24 routine_code CODE >78:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC26 routine_code CODE >79:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC28 routine_code CODE >80:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC2A routine_code CODE >81:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC2C routine_code CODE >82:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC2E routine_code CODE >83:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC30 routine_code CODE >84:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC32 routine_code CODE >85:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC36 routine_code CODE >88:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC38 routine_code CODE >89:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC3A routine_code CODE >92:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC3C routine_code CODE >93:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC3E routine_code CODE >94:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC40 routine_code CODE >95:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC42 routine_code CODE >96:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC44 routine_code CODE >97:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC46 routine_code CODE >98:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC48 routine_code CODE >99:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC4A routine_code CODE >100:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC4C routine_code CODE >105:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC4E routine_code CODE >106:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC50 routine_code CODE >108:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC54 routine_code CODE >109:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC58 routine_code CODE >111:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC5A routine_code CODE >112:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC5C routine_code CODE >114:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC60 routine_code CODE >115:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC64 routine_code CODE >117:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC66 routine_code CODE >118:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC68 routine_code CODE >120:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC6A routine_code CODE >121:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC6C routine_code CODE >122:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC6E routine_code CODE >123:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC70 routine_code CODE >124:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC72 routine_code CODE >125:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC74 routine_code CODE >127:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC76 routine_code CODE >128:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC78 routine_code CODE >130:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC7A routine_code CODE >131:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC7C routine_code CODE >132:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC7E routine_code CODE >133:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC80 routine_code CODE >134:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC82 routine_code CODE >135:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC84 routine_code CODE >136:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC86 routine_code CODE >141:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC88 routine_code CODE >142:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC8A routine_code CODE >144:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC8E routine_code CODE >145:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC92 routine_code CODE >147:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC94 routine_code CODE >148:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC96 routine_code CODE >150:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC98 routine_code CODE >151:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC9A routine_code CODE >152:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC9C routine_code CODE >153:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FC9E routine_code CODE >154:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCA0 routine_code CODE >155:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCA2 routine_code CODE >157:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCA4 routine_code CODE >158:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCA6 routine_code CODE >160:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCA8 routine_code CODE >161:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCAA routine_code CODE >162:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCAC routine_code CODE >163:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCAE routine_code CODE >164:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCB0 routine_code CODE >165:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+1FCB2 routine_code CODE >166:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/hextodec.s
+$build/default/production/main.o
+0 code CODE >26:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+0 code CODE >27:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+4 code CODE >31:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+8 code CODE >32:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+C code CODE >33:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+10 code CODE >34:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+12 code CODE >35:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+14 code CODE >36:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+16 code CODE >37:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+18 code CODE >38:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+1A code CODE >39:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+1E code CODE >44:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+22 code CODE >45:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+26 code CODE >46:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+2A code CODE >48:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+2E code CODE >49:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+32 code CODE >50:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+34 code CODE >51:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+38 code CODE >52:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+3C code CODE >53:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+40 code CODE >54:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+44 code CODE >55:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+46 code CODE >56:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+48 code CODE >57:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+4C code CODE >58:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+50 code CODE >59:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+52 code CODE >64:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+54 code CODE >65:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+56 code CODE >66:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+5A code CODE >69:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+5C code CODE >70:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+5E code CODE >71:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+60 code CODE >72:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+62 code CODE >73:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+66 code CODE >74:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/main.s
+$build/default/production/routine.o
+1FDD2 routine_code CODE >25:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDD4 routine_code CODE >26:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDD6 routine_code CODE >27:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDD8 routine_code CODE >28:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDDA routine_code CODE >29:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDDC routine_code CODE >30:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDDE routine_code CODE >31:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDE0 routine_code CODE >32:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDE4 routine_code CODE >33:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDE6 routine_code CODE >34:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDE8 routine_code CODE >35:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDEC routine_code CODE >36:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDF0 routine_code CODE >37:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDF4 routine_code CODE >38:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDF8 routine_code CODE >39:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDFA routine_code CODE >40:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FDFC routine_code CODE >41:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE00 routine_code CODE >42:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE04 routine_code CODE >43:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE08 routine_code CODE >44:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE0C routine_code CODE >45:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE10 routine_code CODE >46:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE14 routine_code CODE >47:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE18 routine_code CODE >48:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE1A routine_code CODE >52:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE1E routine_code CODE >53:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE22 routine_code CODE >54:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE26 routine_code CODE >55:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE2A routine_code CODE >56:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE2E routine_code CODE >57:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE32 routine_code CODE >58:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE34 routine_code CODE >62:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE36 routine_code CODE >63:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE38 routine_code CODE >64:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE3C routine_code CODE >65:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE3E routine_code CODE >66:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE40 routine_code CODE >67:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE44 routine_code CODE >68:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE46 routine_code CODE >72:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE48 routine_code CODE >73:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE4A routine_code CODE >74:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE4E routine_code CODE >76:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE50 routine_code CODE >77:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE54 routine_code CODE >78:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE58 routine_code CODE >79:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE5C routine_code CODE >80:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE60 routine_code CODE >81:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE64 routine_code CODE >82:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE66 routine_code CODE >83:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE68 routine_code CODE >84:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE6C routine_code CODE >85:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE6E routine_code CODE >92:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE70 routine_code CODE >93:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE72 routine_code CODE >94:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE76 routine_code CODE >97:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE78 routine_code CODE >98:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE7A routine_code CODE >99:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE7C routine_code CODE >100:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE7E routine_code CODE >101:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE82 routine_code CODE >102:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE84 routine_code CODE >106:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE86 routine_code CODE >107:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE88 routine_code CODE >108:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE8A routine_code CODE >109:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE8C routine_code CODE >110:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE8E routine_code CODE >111:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE90 routine_code CODE >112:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE92 routine_code CODE >113:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE94 routine_code CODE >114:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE96 routine_code CODE >115:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE9A routine_code CODE >116:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE9C routine_code CODE >117:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FE9E routine_code CODE >118:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEA2 routine_code CODE >119:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEA4 routine_code CODE >120:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEA6 routine_code CODE >121:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEAA routine_code CODE >123:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEAC routine_code CODE >127:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEAE routine_code CODE >128:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEB0 routine_code CODE >129:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEB2 routine_code CODE >130:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEB4 routine_code CODE >131:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEB6 routine_code CODE >132:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEB8 routine_code CODE >133:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEBC routine_code CODE >134:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEBE routine_code CODE >135:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEC0 routine_code CODE >136:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEC4 routine_code CODE >137:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEC6 routine_code CODE >138:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEC8 routine_code CODE >139:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FECC routine_code CODE >140:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FECE routine_code CODE >143:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FED0 routine_code CODE >144:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FED2 routine_code CODE >145:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FED4 routine_code CODE >146:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FED6 routine_code CODE >147:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FED8 routine_code CODE >148:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEDA routine_code CODE >149:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEDE routine_code CODE >150:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEE0 routine_code CODE >151:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEE2 routine_code CODE >152:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEE6 routine_code CODE >153:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEE8 routine_code CODE >154:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEEA routine_code CODE >155:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEEE routine_code CODE >156:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEF0 routine_code CODE >159:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEF2 routine_code CODE >160:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEF4 routine_code CODE >161:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEF6 routine_code CODE >162:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEF8 routine_code CODE >163:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEFA routine_code CODE >164:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEFC routine_code CODE >167:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FEFE routine_code CODE >168:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF00 routine_code CODE >169:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF02 routine_code CODE >170:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF04 routine_code CODE >171:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF06 routine_code CODE >172:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF08 routine_code CODE >175:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF0C routine_code CODE >176:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF10 routine_code CODE >177:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF14 routine_code CODE >178:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF18 routine_code CODE >179:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF1C routine_code CODE >180:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF20 routine_code CODE >181:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF22 routine_code CODE >182:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF24 routine_code CODE >183:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF28 routine_code CODE >186:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF2A routine_code CODE >187:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF2C routine_code CODE >188:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF30 routine_code CODE >189:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF34 routine_code CODE >190:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF38 routine_code CODE >191:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF3C routine_code CODE >192:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF40 routine_code CODE >193:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF42 routine_code CODE >194:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF44 routine_code CODE >195:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF46 routine_code CODE >196:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF4A routine_code CODE >197:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF4C routine_code CODE >201:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF50 routine_code CODE >202:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF54 routine_code CODE >203:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF58 routine_code CODE >204:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF5C routine_code CODE >205:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF60 routine_code CODE >206:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF64 routine_code CODE >207:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF66 routine_code CODE >208:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF68 routine_code CODE >209:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF6C routine_code CODE >212:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF6E routine_code CODE >213:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF70 routine_code CODE >214:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF74 routine_code CODE >215:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF78 routine_code CODE >216:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF7C routine_code CODE >217:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF80 routine_code CODE >218:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF84 routine_code CODE >219:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF86 routine_code CODE >220:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF88 routine_code CODE >221:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF8A routine_code CODE >222:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF8E routine_code CODE >223:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF90 routine_code CODE >226:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF92 routine_code CODE >227:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF94 routine_code CODE >228:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF98 routine_code CODE >229:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF9A routine_code CODE >232:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF9C routine_code CODE >233:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FF9E routine_code CODE >234:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFA0 routine_code CODE >235:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFA2 routine_code CODE >236:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFA4 routine_code CODE >239:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFA6 routine_code CODE >240:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFA8 routine_code CODE >241:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFAC routine_code CODE >243:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFB0 routine_code CODE >244:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFB2 routine_code CODE >245:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFB4 routine_code CODE >246:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFB6 routine_code CODE >247:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFBA routine_code CODE >248:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFBC routine_code CODE >249:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFBE routine_code CODE >250:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFC2 routine_code CODE >252:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFC6 routine_code CODE >253:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFC8 routine_code CODE >254:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFCA routine_code CODE >255:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFCC routine_code CODE >256:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFD0 routine_code CODE >257:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFD2 routine_code CODE >261:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFD4 routine_code CODE >262:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFD6 routine_code CODE >263:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFDA routine_code CODE >265:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFDE routine_code CODE >266:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFE0 routine_code CODE >267:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFE2 routine_code CODE >268:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFE4 routine_code CODE >269:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFE8 routine_code CODE >270:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFEA routine_code CODE >271:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFEC routine_code CODE >272:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFF0 routine_code CODE >274:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFF4 routine_code CODE >275:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFF6 routine_code CODE >276:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFF8 routine_code CODE >277:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFFA routine_code CODE >278:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+1FFFE routine_code CODE >279:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/routine.s
+$build/default/production/ADC.o
+1FAF8 adc_code CODE >8:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FAFA adc_code CODE >9:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FAFC adc_code CODE >10:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FAFE adc_code CODE >11:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB00 adc_code CODE >12:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB02 adc_code CODE >13:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB04 adc_code CODE >14:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB06 adc_code CODE >15:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB08 adc_code CODE >16:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB0A adc_code CODE >17:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB0C adc_code CODE >18:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB0E adc_code CODE >21:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB10 adc_code CODE >23:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB12 adc_code CODE >24:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+1FB14 adc_code CODE >25:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/ADC.s
+$build/default/production/LCD.o
+1FCB4 lcd_code CODE >21:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCB6 lcd_code CODE >22:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCB8 lcd_code CODE >23:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCBA lcd_code CODE >24:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCBC lcd_code CODE >25:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCC0 lcd_code CODE >26:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCC2 lcd_code CODE >27:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCC6 lcd_code CODE >28:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCC8 lcd_code CODE >29:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCCC lcd_code CODE >30:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCCE lcd_code CODE >31:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCD2 lcd_code CODE >32:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCD4 lcd_code CODE >33:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCD8 lcd_code CODE >34:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCDA lcd_code CODE >35:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCDE lcd_code CODE >36:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCE0 lcd_code CODE >37:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCE4 lcd_code CODE >38:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCE6 lcd_code CODE >39:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCEA lcd_code CODE >40:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCEC lcd_code CODE >41:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCF0 lcd_code CODE >42:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCF2 lcd_code CODE >43:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCF6 lcd_code CODE >44:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCF8 lcd_code CODE >45:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCFC lcd_code CODE >46:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FCFE lcd_code CODE >47:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD02 lcd_code CODE >48:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD04 lcd_code CODE >49:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD08 lcd_code CODE >50:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD0A lcd_code CODE >53:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD0C lcd_code CODE >54:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD0E lcd_code CODE >55:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD12 lcd_code CODE >56:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD14 lcd_code CODE >58:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD16 lcd_code CODE >59:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD18 lcd_code CODE >60:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD1A lcd_code CODE >61:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD1C lcd_code CODE >62:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD1E lcd_code CODE >63:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD20 lcd_code CODE >64:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD22 lcd_code CODE >65:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD26 lcd_code CODE >66:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD28 lcd_code CODE >69:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD2A lcd_code CODE >71:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD2C lcd_code CODE >72:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD30 lcd_code CODE >73:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD32 lcd_code CODE >74:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD34 lcd_code CODE >75:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD36 lcd_code CODE >78:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD38 lcd_code CODE >79:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD3A lcd_code CODE >80:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD3C lcd_code CODE >81:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD3E lcd_code CODE >82:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD40 lcd_code CODE >83:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD44 lcd_code CODE >84:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD46 lcd_code CODE >85:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD48 lcd_code CODE >86:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD4A lcd_code CODE >87:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD4C lcd_code CODE >88:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD50 lcd_code CODE >89:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD52 lcd_code CODE >92:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD54 lcd_code CODE >93:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD56 lcd_code CODE >94:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD58 lcd_code CODE >95:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD5A lcd_code CODE >96:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD5C lcd_code CODE >97:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD60 lcd_code CODE >98:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD62 lcd_code CODE >99:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD64 lcd_code CODE >100:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD66 lcd_code CODE >101:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD68 lcd_code CODE >102:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD6C lcd_code CODE >103:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD6E lcd_code CODE >104:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD72 lcd_code CODE >105:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD74 lcd_code CODE >109:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD76 lcd_code CODE >110:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD7A lcd_code CODE >111:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD7C lcd_code CODE >112:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD80 lcd_code CODE >113:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD82 lcd_code CODE >116:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD84 lcd_code CODE >117:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD86 lcd_code CODE >118:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD88 lcd_code CODE >119:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD8A lcd_code CODE >120:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD8C lcd_code CODE >121:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD8E lcd_code CODE >122:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD90 lcd_code CODE >123:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD92 lcd_code CODE >124:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD94 lcd_code CODE >125:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD96 lcd_code CODE >126:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD98 lcd_code CODE >127:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD9A lcd_code CODE >128:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD9C lcd_code CODE >129:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FD9E lcd_code CODE >130:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDA0 lcd_code CODE >131:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDA2 lcd_code CODE >132:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDA4 lcd_code CODE >133:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDA6 lcd_code CODE >137:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDA8 lcd_code CODE >138:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDAA lcd_code CODE >139:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDAE lcd_code CODE >140:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDB0 lcd_code CODE >141:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDB2 lcd_code CODE >142:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDB4 lcd_code CODE >145:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDB6 lcd_code CODE >146:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDB8 lcd_code CODE >147:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDBA lcd_code CODE >148:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDBC lcd_code CODE >149:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDBE lcd_code CODE >150:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDC0 lcd_code CODE >151:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDC2 lcd_code CODE >152:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDC6 lcd_code CODE >153:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDC8 lcd_code CODE >156:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDCA lcd_code CODE >157:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDCC lcd_code CODE >158:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDCE lcd_code CODE >159:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+1FDD0 lcd_code CODE >160:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LCD.s
+$build/default/production/LDR.o
+1FB16 routine_code CODE >17:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB18 routine_code CODE >18:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB1A routine_code CODE >19:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB1C routine_code CODE >20:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB1E routine_code CODE >21:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB20 routine_code CODE >22:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB24 routine_code CODE >23:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB26 routine_code CODE >24:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB28 routine_code CODE >25:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB2C routine_code CODE >26:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB2E routine_code CODE >30:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB30 routine_code CODE >31:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB32 routine_code CODE >32:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB34 routine_code CODE >33:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB36 routine_code CODE >34:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB38 routine_code CODE >35:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB3A routine_code CODE >36:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB3C routine_code CODE >37:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB3E routine_code CODE >38:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB40 routine_code CODE >39:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB42 routine_code CODE >43:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB44 routine_code CODE >44:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB46 routine_code CODE >45:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB48 routine_code CODE >46:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB4A routine_code CODE >47:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB4C routine_code CODE >48:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB4E routine_code CODE >49:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB50 routine_code CODE >50:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB54 routine_code CODE >51:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB56 routine_code CODE >54:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB58 routine_code CODE >55:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB5A routine_code CODE >56:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+1FB5C routine_code CODE >57:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/LDR.s
+$build/default/production/motor_control.o
+1FB5E motor_code CODE >22:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB60 motor_code CODE >23:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB62 motor_code CODE >24:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB64 motor_code CODE >25:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB66 motor_code CODE >26:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB68 motor_code CODE >27:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB6A motor_code CODE >28:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB6C motor_code CODE >32:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB6E motor_code CODE >33:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB70 motor_code CODE >34:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB72 motor_code CODE >35:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB76 motor_code CODE >36:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB78 motor_code CODE >37:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB7A motor_code CODE >38:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB7C motor_code CODE >39:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB80 motor_code CODE >40:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB82 motor_code CODE >45:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB84 motor_code CODE >46:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB86 motor_code CODE >47:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB88 motor_code CODE >48:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB8C motor_code CODE >49:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB8E motor_code CODE >50:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB90 motor_code CODE >51:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB92 motor_code CODE >52:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB96 motor_code CODE >54:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB98 motor_code CODE >61:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB9A motor_code CODE >63:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FB9C motor_code CODE >64:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBA0 motor_code CODE >65:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBA2 motor_code CODE >66:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBA4 motor_code CODE >67:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBA6 motor_code CODE >70:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBA8 motor_code CODE >71:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBAA motor_code CODE >72:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBAC motor_code CODE >73:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBAE motor_code CODE >74:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBB0 motor_code CODE >75:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBB2 motor_code CODE >76:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBB4 motor_code CODE >77:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBB8 motor_code CODE >78:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBBA motor_code CODE >81:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBBC motor_code CODE >82:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBBE motor_code CODE >83:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBC0 motor_code CODE >84:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+1FBC2 motor_code CODE >85:/Users/carlamiquel-davidson/MPLABXProjects/Dual-Axis/dead/motor_control.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Ladc_code 0 0 ABS 0 adc_code -
+__Hspace_0 20000 0 ABS 0 - -
+__Hspace_1 30 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 60000E 0 ABS 0 - -
+__Hudata_bank0 0 0 ABS 0 udata_bank0 -
+__Hudata_bank1 0 0 ABS 0 udata_bank1 -
+__Hudata_bank2 0 0 ABS 0 udata_bank2 -
+__Hudata_bank3 0 0 ABS 0 udata_bank3 -
+__Hudata_bank4 0 0 ABS 0 udata_bank4 -
+__Hudata_bank5 0 0 ABS 0 udata_bank5 -
+__Hudata_bank6 0 0 ABS 0 udata_bank6 -
+__Hudata_bank7 0 0 ABS 0 udata_bank7 -
+__Hudata_bank8 0 0 ABS 0 udata_bank8 -
+__Hudata_bank9 0 0 ABS 0 udata_bank9 -
+sol D 0 COMRAM 1 udata_acs build/default/production/hextodec.o
+__Hlcd_code 0 0 ABS 0 lcd_code -
+part1 9 0 COMRAM 1 udata_acs build/default/production/hextodec.o
+part2 A 0 COMRAM 1 udata_acs build/default/production/hextodec.o
+part3 B 0 COMRAM 1 udata_acs build/default/production/hextodec.o
+part4 C 0 COMRAM 1 udata_acs build/default/production/hextodec.o
+__Ludata_acs_ovr 2F 0 COMRAM 1 udata_acs_ovr -
+best_high_word 2C 0 COMRAM 1 udata_acs build/default/production/LDR.o
+LCD_Write_Hex 1FD0A 0 CODE 0 lcd_code build/default/production/LCD.o
+__Hadc_code 0 0 ABS 0 adc_code -
+__Hudata_acs_ovr 30 0 COMRAM 1 udata_acs_ovr -
+initial_setup 1FDD2 0 CODE 0 routine_code build/default/production/routine.o
+best_low_word 2B 0 COMRAM 1 udata_acs build/default/production/LDR.o
+__Hmotor_code 0 0 ABS 0 motor_code -
+__Hudata_bank10 0 0 ABS 0 udata_bank10 -
+__Hudata_bank11 0 0 ABS 0 udata_bank11 -
+__Hudata_bank12 0 0 ABS 0 udata_bank12 -
+__Hudata_bank13 0 0 ABS 0 udata_bank13 -
+__Hudata_bank14 0 0 ABS 0 udata_bank14 -
+__Hudata_bank15 0 0 ABS 0 udata_bank15 -
+ADC_Setup 1FAF8 0 CODE 0 adc_code build/default/production/ADC.o
+LDR_compare_loop 1FB16 0 CODE 0 routine_code build/default/production/LDR.o
+__Lmotor_code 0 0 ABS 0 motor_code -
+isa$xinst 0 0 ABS 0 - build/default/production/main.o
+__Hedata 0 0 ABS 0 edata -
+__Hudata 0 0 ABS 0 udata -
+__Hconfig 30000E 0 CONFIG 4 config -
+__Ledata 0 0 ABS 0 edata -
+__Ludata 0 0 ABS 0 udata -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+RES0 1 0 COMRAM 1 udata_acs build/default/production/hextodec.o
+RES1 0 0 COMRAM 1 udata_acs build/default/production/hextodec.o
+RES2 2 0 COMRAM 1 udata_acs build/default/production/hextodec.o
+RES3 3 0 COMRAM 1 udata_acs build/default/production/hextodec.o
+__S0 20000 0 ABS 0 - -
+__S1 30 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+test 2D 0 COMRAM 1 udata_acs build/default/production/LDR.o
+__Ludata_bank10 0 0 ABS 0 udata_bank10 -
+__Ludata_bank11 0 0 ABS 0 udata_bank11 -
+__Ludata_bank12 0 0 ABS 0 udata_bank12 -
+__Ludata_bank13 0 0 ABS 0 udata_bank13 -
+__Ludata_bank14 0 0 ABS 0 udata_bank14 -
+__Ludata_bank15 0 0 ABS 0 udata_bank15 -
+ADC_Read 1FB0E 0 CODE 0 adc_code build/default/production/ADC.o
+__Lconfig 0 0 CONFIG 4 config -
+LCD_Write_Message 1FD28 0 CODE 0 lcd_code build/default/production/LCD.o
+pulse_length1 19 0 COMRAM 1 udata_acs build/default/production/main.o
+pulse_length2 1A 0 COMRAM 1 udata_acs build/default/production/main.o
+isa$std 1 0 ABS 0 - build/default/production/main.o
+__Hroutine_code 0 0 ABS 0 routine_code -
+LCD_Setup 1FCB4 0 CODE 0 lcd_code build/default/production/LCD.o
+LCD_clear 1FD74 0 CODE 0 lcd_code build/default/production/LCD.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+marker1 12 0 COMRAM 1 udata_acs build/default/production/routine.o
+marker2 13 0 COMRAM 1 udata_acs build/default/production/routine.o
+__Ludata_bank0 0 0 ABS 0 udata_bank0 -
+__Ludata_bank1 0 0 ABS 0 udata_bank1 -
+__Ludata_bank2 0 0 ABS 0 udata_bank2 -
+__Ludata_bank3 0 0 ABS 0 udata_bank3 -
+__Ludata_bank4 0 0 ABS 0 udata_bank4 -
+__Ludata_bank5 0 0 ABS 0 udata_bank5 -
+__Ludata_bank6 0 0 ABS 0 udata_bank6 -
+__Ludata_bank7 0 0 ABS 0 udata_bank7 -
+__Ludata_bank8 0 0 ABS 0 udata_bank8 -
+__Ludata_bank9 0 0 ABS 0 udata_bank9 -
+long_move1 1FFA4 0 CODE 0 routine_code build/default/production/routine.o
+long_move2 1FFD2 0 CODE 0 routine_code build/default/production/routine.o
+motor_Setup 1FB5E 0 CODE 0 motor_code build/default/production/motor_control.o
+__Llcd_code 0 0 ABS 0 lcd_code -
+secondary_loop 1FE1A 0 CODE 0 routine_code build/default/production/routine.o
+__Hudata_acs 0 0 ABS 0 udata_acs -
+__Lroutine_code 0 0 ABS 0 routine_code -
+best_position1 10 0 COMRAM 1 udata_acs build/default/production/routine.o
+best_position2 11 0 COMRAM 1 udata_acs build/default/production/routine.o
+change_marker 2E 0 COMRAM 1 udata_acs build/default/production/LDR.o
+move_motor1 1FB6C 0 CODE 0 motor_code build/default/production/motor_control.o
+move_motor2 1FB82 0 CODE 0 motor_code build/default/production/motor_control.o
+hextodec 1FBC4 0 CODE 0 routine_code build/default/production/hextodec.o
+count2 F 0 COMRAM 1 udata_acs build/default/production/routine.o
+__Ludata_acs 0 0 ABS 0 udata_acs -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+adc_code 0 1FAF8 1FAF8 1E 1
+routine_code 0 1FDD2 1FDD2 22E 1
+udata_acs 1 0 0 30 1
+lcd_code 0 1FCB4 1FCB4 11E 1
+routine_code%291 0 1FBC4 1FBC4 F0 1
+routine_code%293 0 1FB16 1FB16 48 1
+motor_code 0 1FB5E 1FB5E 66 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
