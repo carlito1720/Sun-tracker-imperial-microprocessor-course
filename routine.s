@@ -3,7 +3,7 @@
 global  initial_setup, long_move1, long_move2, best_position1, best_position2, count2, marker1, marker2, secondary_loop
    
 extrn	test, move_motor1, move_motor2, ADC_Read, LDR_compare_loop, ADC_Setup, pulse_length1, pulse_length2, change_marker
-    
+extrn	long_move1, long_move2
 
 
 	
@@ -14,8 +14,6 @@ best_position1:	ds 1	; reserve 1 byte for best position of motor 1
 best_position2:	ds 1	; reserve 1 byte for best position of motor 2
 marker1:	ds 1	; reserve 1 byte as a marker for position 4
 marker2:	ds 1	; reserve 1 byte as a marker for position 26
-c1:		ds 1	; reserve 1 byte for a counter for the repeated pwm signal of motor 1
-c2:		ds 1	; reserve 1 byte for a counter for the repeated pwm signal of motor 2
 count_m1:	ds 1	; reserve 1 byte for upwards secondary scan
 count_m2:	ds 1	; reserve 1 byte for downwards secondary scan
 
@@ -235,49 +233,6 @@ change_best_position:	; if the best position has changed -> update the variables
 	movwf	best_position2, A	    ; make the current position the best position of motor 1
 	return
 	
-long_move1:	; code do reapeat the PWM signal for motor 1
-    	movlw	0xFF
-	movwf	c1
-	goto	loop1
-    loop1:
-	call	move_motor1
-	decf	c1
-	movlw	0x00
-	cpfseq	c1
-	goto	loop1
-	movlw	0xFF
-	movwf	c1
-	goto	loop3
-    loop3:
-	call	move_motor1
-	decf	c1
-	movlw	0x00
-	cpfseq	c1
-	goto	loop3
-	return
-	
-	
-long_move2:	; code do reapeat the PWM signal for motor 2
-    	movlw	0xFF
-	movwf	c2
-	goto	loop
-    loopm2:
-	call	move_motor2
-	decf	c2
-	movlw	0x00
-	cpfseq	c2
-	goto	loopm2
-	movlw	0xFF
-	movwf	c2
-	goto	loop2
-    loop2:
-	call	move_motor2
-	decf	c2
-	movlw	0x00
-	cpfseq	c2
-	goto	loop2
-	return
-
 
 
 end
