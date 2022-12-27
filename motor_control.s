@@ -1,6 +1,6 @@
 #include <xc.inc>
     
-global  motor_Setup, move_motor1, move_motor2
+global  motor_Setup, move_motor1, move_motor2, long_move1, long_move2
     
     
 extrn	pulse_length1, pulse_length2
@@ -12,7 +12,8 @@ motor_cnt_h:	ds 1	; reserve 1 byte for variable motor_cnt_h
 motor_cnt_ms:	ds 1	; reserve 1 byte for ms counter
 motor_tmp:	ds 1	; reserve 1 byte for temporary use
 motor_counter:	ds 1	; reserve 1 byte for counting through message
-
+c1:		ds 1	; reserve 1 byte for a counter for the repeated pwm signal of motor 1
+c2:		ds 1	; reserve 1 byte for a counter for the repeated pwm signal of motor 2		
 
 
 psect	motor_code, class=CODE
@@ -53,6 +54,48 @@ move_motor2:
 	
 	return
     
+long_move1:	; code do reapeat the PWM signal for motor 1
+    	movlw	0xFF
+	movwf	c1
+	goto	loop1
+    loop1:
+	call	move_motor1
+	decf	c1
+	movlw	0x00
+	cpfseq	c1
+	goto	loop1
+	movlw	0xFF
+	movwf	c1
+	goto	loop3
+    loop3:
+	call	move_motor1
+	decf	c1
+	movlw	0x00
+	cpfseq	c1
+	goto	loop3
+	return
+	
+	
+long_move2:	; code do reapeat the PWM signal for motor 2
+    	movlw	0xFF
+	movwf	c2
+	goto	loopm2
+    loopm2:
+	call	move_motor2
+	decf	c2
+	movlw	0x00
+	cpfseq	c2
+	goto	loopm2
+	movlw	0xFF
+	movwf	c2
+	goto	loop2
+    loop2:
+	call	move_motor2
+	decf	c2
+	movlw	0x00
+	cpfseq	c2
+	goto	loop2
+	return
 
     
     ;;delay routines to create the correct PWM cycle
@@ -86,5 +129,3 @@ motorlp1:	decf 	motor_cnt_l, F, A	; no carry when 0x00 -> 0xff
 
 
 	end	
-
-
