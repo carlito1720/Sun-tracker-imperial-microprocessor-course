@@ -101,56 +101,56 @@ increment_loop:	;loop to make the step motor move by 4 steps
 
 	
 scan2:	
-	movlw	0x00	    ; check if the best positions is not at the edge
+	movlw	0x00	    ; check if the best positions is not at the limit of the servo motor's range
 	cpfseq	marker1, A
 	return
 	movlw	0x00
 	cpfseq	marker2, A
 	return
-	movlw	0x02
+	movlw	0x02			; move the solar panel to the top left corner
 	addwf	pulse_length1, 1
 	addwf	pulse_length2, 1
-	call	down_in_m2
+	call	down_in_m2		; move the solar panel down twice while taking the luminosity
 	movlw	0x02
 	subwf	pulse_length1,1
-	call	up_in_m2
-	movlw	0x02
+	call	up_in_m2		; move the solar panel up twice while taking the luminosity
+	movlw	0x02			
 	subwf	pulse_length1, 1
-	call	down_in_m2
+	call	down_in_m2		; move the solar panel down twice while taking the luminosity
 	
 	return
 	
     
-special_scan21:
-	movlw	0x01
+special_scan21:				; secondary scan if solar panel is at the higher limit of the servo motor's range
+	movlw	0x01			;check if the solar panel is at the limit of the servo motor's range
 	cpfseq	marker1, A
 	return
 	movlw	0x02
 	addwf	pulse_length1, 1
 	subwf	pulse_length2, 1
-	call	up_in_m2
+	call	up_in_m2		; move the solar panel up twice while taking the luminosity
 	movlw	0x02
 	subwf	pulse_length1, A
-	call	down_in_m2
-	movlw	24
+	call	down_in_m2		; move the solar panel down twice while taking the luminosity
+	movlw	24	
 	movwf	pulse_length1 ,A
-	call	up_in_m2
+	call	up_in_m2		; move the solar panel up twice while taking the luminosity
 	return
 	
-special_scan22:
-	movlw	0x01
+special_scan22:			; secondary scan if solar panel is at the  lower limit of the servo motor's range
+	movlw	0x01		; check if the solar panel is at the limit of the servo motor's range
 	cpfseq	marker2, A
 	return
 	movlw	0x02
 	addwf	pulse_length1, 1
 	subwf	pulse_length2, 1
-	call	up_in_m2
+	call	up_in_m2		; move the solar panel up twice while taking the luminosity
 	movlw	0x02
 	subwf	pulse_length1, A
-	call	down_in_m2
+	call	down_in_m2		; move the solar panel down twice while taking the luminosity
 	movlw	24
 	movwf	pulse_length1 , A
-	call	up_in_m2
+	call	up_in_m2		; move the solar panel up twice while taking the luminosity
 	return
 	
 position_check1:    ;check if the best position is not 4, if so change marker 1 to 1
